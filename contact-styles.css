@@ -1,0 +1,221 @@
+.contact-options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.option-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: rgba(35, 35, 45, 0.6);
+    border: 2px solid rgba(74, 144, 226, 0.3);
+    border-radius: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.option-btn:hover {
+    background: rgba(45, 45, 55, 0.8);
+    border-color: rgba(74, 144, 226, 0.5);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.option-btn.active {
+    background: linear-gradient(145deg, rgba(74, 144, 226, 0.8), rgba(107, 182, 255, 0.6));
+    border-color: rgba(74, 144, 226, 0.8);
+    color: #ffffff;
+}
+
+.option-icon {
+    font-size: 1.2rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-group.half {
+    flex: 1;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(30, 30, 40, 0.6);
+    backdrop-filter: blur(15px);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: rgba(74, 144, 226, 0.6);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+    background: rgba(35, 35, 45, 0.8);
+}
+
+.form-group select option {
+    background: #2a2a3e;
+    color: #ffffff;
+    padding: 0.5rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0 !important;
+}
+
+.checkbox-label input[type="checkbox"] {
+    display: none;
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    background: rgba(30, 30, 40, 0.8);
+    border: 2px solid rgba(74, 144, 226, 0.4);
+    border-radius: 4px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark {
+    background: linear-gradient(45deg, #4a90e2, #6bb6ff);
+    border-color: #4a90e2;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.services-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.service-card {
+    background: rgba(35, 35, 45, 0.6);
+    backdrop-filter: blur(15px);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(74, 144, 226, 0.3);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(74, 144, 226, 0.6);
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.2);
+}
+
+.service-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.service-card h4 {
+    color: #4a90e2;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.service-card p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+.guarantee-badge {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(145deg, rgba(74, 144, 226, 0.1), rgba(107, 182, 255, 0.05));
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+    border: 1px solid rgba(74, 144, 226, 0.3);
+}
+
+.badge-icon {
+    background: linear-gradient(45deg, #4a90e2, #6bb6ff);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.badge-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.badge-text strong {
+    color: #4a90e2;
+    font-size: 1rem;
+}
+
+.badge-text span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .contact-options {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .option-btn {
+        width: 100%;
+        max-width: 250px;
+        justify-content: center;
+    }
+    
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .form-group.half {
+        flex: none;
+    }
+    
+    .services-showcase {
+        grid-template-columns: 1fr;
+    }
+    
+    .guarantee-badge {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+}
